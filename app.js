@@ -50,14 +50,17 @@ app.use(cookieParser());
 app.disable('etag')
 app.use(cacheResponseDirective());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/shared', require('./routes/quickFixService'));
 
 //routes
 var routes = require('./routes/index')(config);
 var isactive = require('./routes/isactive');
 var buildinfo = require('./routes/buildinfo');
+var sharedServices =  require('./routes/quickFixService');
 app.use('/', routes);
 app.use('/isActive', isactive);
 app.use('/buildInfo', buildinfo);
+app.use('/shared', sharedServices);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
