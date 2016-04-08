@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>CGS Reports - Paragraphs</title>
+
+    <!-- START: Common libraries -->
+    <script src="/lib/jquery/jquery-1.11.3.min.js"></script>
+
+    <script src="/lib/highcharts4/js/highcharts.js"></script>
+    <script src="/lib/highcharts4/js/modules/drilldown.js"></script>
+    <script src="/lib/highcharts4/js/modules/exporting.js"></script>
+
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src='/lib/bootstrap/js/bootstrap.min.js'></script>
+
+    <script src="/lib/bootstrap/js/bootstrap-growl.min.js"></script>
+
+    <link href="/lib/bootstrap-switch/css/bootstrap-switch.css" rel="stylesheet">
+    <script src="/lib/bootstrap-switch/js/bootstrap-switch.js"></script>
+
+    <link href="/lib/ios-overlay/css/iosOverlay.css" rel="stylesheet">
+    <script src="/lib/ios-overlay/js/iosOverlay.js"></script>
+    <script src="/lib/ios-overlay/js/spin.min.js"></script>
+
+    <link href="/lib/datatables/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/lib/datatables/_responsive/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="/lib/datatables/_responsive/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <script src="/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="/lib/datatables/_responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/lib/datatables/_responsive/js/responsive.bootstrap.min.js"></script>
+
+    <link href="/lib/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <script src="/lib/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+    <link href="/lib/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <script src="/lib/datetimepicker/js/moment-2.4.0.js"></script>
+    <script src="/lib/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+
+    <script src="/lib/angularjs/angular.min.js"></script>
+    <script src="/lib/angularjs/angular-cookies.min.js"></script>
+    <script src="/lib/angularjs/angular-animate.min.js"></script>
+
+    <script src="/assets/js/util/defaults.js"></script>
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <!-- END: Common libraries -->
+
+
+    <!-- START: jsFile application -->
+    <script src="/lib/spin.js/spin.js" type="text/javascript"></script>
+    <script src="/lib/angular-spinner/angular-spinner.js" type="text/javascript"></script>
+    <!-- END: jsFile application -->
+
+    <!-- START: Spinner application -->
+    <script src="/lib/angular-file-saver/angular-file-saver.bundle.js" type="text/javascript"></script>
+    <script src="/lib/underscore/underscore.js" type="text/javascript"></script>
+    <!-- END: Spinner application -->
+
+    <!-- START: Angular application -->
+    <script src="/assets/js/localization/tools/app.js" type="text/javascript"></script>
+    <script src="/assets/js/localization/tools/quickFixController.js" type="text/javascript"></script>
+    <script src="/assets/js/localization/tools/quickFixCommonService.js" type="text/javascript"></script>
+
+    <script src="/assets/js/directives/js/progressbar.js" type="text/javascript"></script>
+    <script src="/assets/js/directives/js/dropdown.js" type="text/javascript"></script>
+    <script src="/assets/js/directives/js/onreadfile.js" type="text/javascript"></script>
+
+    <script src="/assets/js/shared/quickFixSharedServices.js" type="text/javascript"></script>
+    <!-- END: Angular application -->
+
+
+</head>
+
+<body ng-app="quickFixModule">
+
+<header ng-include="'/header.html'"></header>
+
+<div class="marketing" style="margin-top:20px; margin-left:50px; margin-right:50px">
+
+
+    <div class='box rounded shadow' style="margin-top:20px">
+
+       <h2 class="header" style="margin-top:-30px; margin-bottom:30px">   <i class="glyphicon glyphicon-screenshot"></i>   QuickFix</i></h2>
+        <!----------------------------------------------------------------- Tabs Section--------------------------------------------------------------------------->
+
+        <div id="filters" ng-controller="quickFixCtl" ng-init="init()">
+                <div style="margin-left:250px">
+
+                <div  id="searchByFile">
+
+                    <br/>
+                    <br/>
+
+                    <dl class="lead">
+
+                        <!------------------------------------------------- Domain ----------------------------------------------------->
+                        <dt>
+                            <span class="glyphicon glyphicon-inbox"></span>
+                            <strong>Database</strong>
+                        </dt>
+                        <dd>
+                            <select   class="selectpicker" data-html="true" data-width="100%" id="ddEnvironmentFileSearch_file" ng-init="initEnvironment()" ng-model="selectedEnvironment">
+                                <option    data-content='<span class="glyphicon glyphicon-tasks" style="font-weight:normal"></span>&nbsp;&nbsp;CarsInventory' value="CarsInventory"></option>
+                            </select>
+                        </dd>
+
+
+                        <!--------------------------------------------------- Table  ----------------------------------------------------->
+
+                        <!-- DROPDOWN ALL FILTERS -->
+                        <div class="filter animate-repeat" id="filter-$index" ng-repeat="filter in filters track by $index">
+                            <div ng-if="filter.name == 'Table'">
+                                <dt>
+                                    <span class="glyphicon glyphicon-th-list"></span>
+                                    <strong>{{filter.name}}</strong>
+
+                                </dt>
+                            </div>
+
+
+                            <div ng-if="filter.options != null">
+
+                               <div ng-if="filter.name == 'Table'">
+
+                                   <dd>
+                                      <cgs-dropdown datasource="quickFixTables" ng-id="quickFixTables" ng-model="filter.value"></cgs-dropdown>
+                                   </dd>
+
+                               </div>
+                            </div>
+
+                        </div>
+
+                        <!------------------------------- Upload ---------------------------->
+                        <dt>
+                            <span class="glyphicon glyphicon-open"></span>
+                            <strong>Upload</strong>
+                        </dt>
+                        <dd>
+                            <form action="" enctype="multipart/form-data" id="upload-form" method="post">
+                                <div class="input-group">
+
+                                    <span class="input-group-addon" style="width:100%; text-align:left;">Select a data file</span>
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-success btn-file">
+                                                <i class="glyphicon glyphicon-folder-open"></i> Browse ...
+
+                                                <input  id="input-file" ng-click="retrieveTableColumns()" on-read-file="parseFileContent($fileContent)" type="file" />
+                                            </span>
+                                        </span>
+
+
+                                </div>
+                              </form>
+                        </dd>
+
+                        <!-- Invalid File -->
+                        <div class="js-upload-finished" ng-if="errMessage">
+                            <dt>
+                                <span class="glyphicon glyphicon-open-file"></span>
+                                <strong>Processed file</strong>
+                            </dt>
+                            <dd>
+                                <div class="list-group">
+                                    <i class="list-group-item list-group-item-warning" style="font-size:12px">
+                                        <span class="glyphicon glyphicon-alert"></span>
+                                        {{ errMessage }}
+                                    </i>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <!-- Processed File -->
+
+                        <div class="js-upload-finished" id="upload-finished" ng-if="fileName">
+                            <dt>
+                                <span class="glyphicon glyphicon-open-file"></span>
+                                <strong>Processed file</strong>
+                            </dt>
+                            <dd>
+                                <div class="list-group">
+                                    <i class="list-group-item list-group-item-success" style="font-size:12px;">
+                                        <span class="badge alert-success pull-right">{{ fileName }}</span>
+                                        <span class="glyphicon glyphicon-ok-sign"></span>
+                                    </i>
+                                </div>
+
+
+                            </dd>
+
+
+                        <!-- Exported File -->
+
+                        <div class="js-upload-finished" id="export-finished" ng-if="exportFileName">
+                            <dt>
+                                <span class="glyphicon glyphicon-save-file"></span>
+                                <strong>Generated file</strong>
+                            </dt>
+                            <dd>
+                                <div class="list-group">
+                                    <i class="list-group-item list-group-item-success" style="font-size:12px;">
+                                        <span class="badge alert-success pull-right">{{ exportFileName }}</span>
+                                        <span class="glyphicon glyphicon-paperclip"></span>
+                                    </i>
+                                </div>
+
+                                <div align="right">
+                                    <a class="btn btn-warning btn-large btn-secondary has-spinner"  data-loading-text="Export"  id="btn-export" ng-click="beginExportFromFile()">
+                                        <span  id="export_id" class="glyphicon glyphicon-download-alt"></span>
+                                        Export
+                                      <span class="spinner">
+                                       <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>
+                                    </span>
+                                    </a>
+                                </div>
+
+
+                            </dd>
+                        </div>
+                            </div>
+
+
+                    </dl>
+
+                    <br/>
+
+                </div>
+                <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/> <br/>  <br/>  <br/>  <br/>
+
+
+            </div>
+
+        </div>
+
+
+        <footer ng-include="'/footer.html'"></footer>
+    </div>
+</div>
+</body>
+
+</html>

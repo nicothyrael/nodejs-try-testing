@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>CGS Reports</title>
+
+    <script src="/lib/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src='/lib/bootstrap/js/bootstrap.min.js'></script>
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    <script src="/lib/angularjs/angular.min.js"></script>
+    <script src="/lib/angularjs/angular-animate.min.js"></script>
+    <script>
+        angular.module('quickFixModule', []);
+    </script>
+</head>
+<body ng-app="quickFixModule">
+    <header ng-include="'/header.html'" ng-init="page = 'index'"></header>
+
+        <div class="marketing" style="margin-top:20px; margin-left:50px; margin-right:50px">
+
+        <div class="main-container">
+            <h2>Welcome to Localization Services.</h2>
+            <p>Please use the menu above to access the different localization services.</p>
+            <footer ng-include="'/footer.html'"></footer>
+        </div>
+    </div>
+</body>
+</html>

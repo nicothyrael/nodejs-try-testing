@@ -1,0 +1,342 @@
+/*
+ * Styles used for Data - Hotel page
+ */
+.main-container {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px #ddd;
+}
+.main-container > :first-child { margin-top: 0; }
+
+/* 100% width for cgs-dropdown instances */
+.main-container .cgs-dropdown .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Filters form */
+.filter-row { margin-bottom: 15px; }
+.filter-row h3 {
+    font-size: 21px;
+    margin: 6px 0 0;
+}
+/* Consistent icon spacing */
+.filter-row h3 i { margin-right: 8px; }
+header .navbar-nav a i, .button-add-dropdown a i { margin-right: 4px; }
+
+/* Center progress bar and other things */
+.progress-search { width: 550px; margin: 30px auto; }
+.lbl-nodata { text-align: center; }
+
+footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+footer p { text-align: right; }
+
+/* Make the widget clickable even if it's larget than its parent */
+.bootstrap-switch { z-index: 5; }
+
+/*
+ * Styles used for all pages except Data - Hotel
+ */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.modal {
+    z-index: 99999;
+}
+.dataTables_filter > label > input {
+    min-width: 200px;
+    margin-left: 15px;
+}
+dl {
+    float: left;
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto
+}
+dt {
+    float: left;
+    width: 230px;
+    vertical-align: middle;
+}
+dd {
+    float: left;
+    width: 330px;
+    height: 50px
+}
+div#filters {
+    margin-left: 255px;
+}
+.btn-remove {
+    margin-top: -64px;
+    margin-left: 300px;
+}
+.btn-dd-remove {
+    margin-top: -88px;
+    margin-left: 300px;
+}
+.btn-date-remove {
+    margin-top: -64px;
+    margin-left: 300px;
+}
+.dataTables_filter, .dataTables_paginate {
+    float: right;
+}
+div.align-right {
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+}
+.btn-secondary {
+    margin-left: 2px;
+    margin-top: -34px;
+}
+.btn-main {
+    margin-top: -34px;
+    margin-left: 150px
+}
+.btn-main-of-three {
+    margin-top: -34px;
+    margin-left: 90px
+}
+.btn-main-of-two {
+    margin-top: -34px;
+    margin-left: 195px
+}
+.filter-group {
+    margin-left: 90px
+}
+.line-sm {
+    width: 500px;
+    margin-left: 10px
+}
+.chart {
+    width: 1100px;
+    height: 550px;
+    margin-left: -50px
+}
+.change-order, .change-addition, .change-display-name {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    padding: 2px 4px;
+    font-size: 90%;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.change-order {
+    color: #259fc8;
+    background-color: #ceecf6;
+}
+.change-addition {
+    color: #1c9638;
+    background-color: #dff9e5;
+}
+.change-display-name {
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    display: block !important;
+}
+.animate-show.ng-hide-add.ng-hide-add-active, .animate-show.ng-hide-remove {
+    opacity: 0 !important;
+}
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1 !important;
+}
+
+.check-element {
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+.lbl-nodata {
+    font-size: 200% !important;
+    color: #999 !important;
+}
+.filter-label {
+    margin-top: -6px !important;
+    margin-left: 80px !important;
+}
+input.chk-show {
+    margin-top: 800px !important;
+}
+.modal-dialog {
+    width: 750px;
+}
+.popover-content {
+    font-size: 17px;
+}
+.tooltip-inner {
+    min-width: 120px;
+    background-color: #428bca;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rounded {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 60px;
+    margin-bottom: 30px;
+}
+.inner-shadow {
+    -moz-box-shadow: inset 0px 5px 10px #ccc;
+    -webkit-box-shadow: inset 0px 5px 10px #ccc;
+    box-shadow: inset 0px 5px 10px #ccc;
+}
+.shadow {
+    -moz-box-shadow: 0px 5px 12px #ddd;
+    -webkit-box-shadow: 0px 5px 12px #ddd;
+    box-shadow: 0px 5px 12px #ddd;
+}
+.affix, .navbar-fixed-top {
+    -webkit-transform: scale3d(1, 1, 1);
+}
+.navbar-default {
+    background-color: #39454b;
+    border-color: #E7E7E7;
+}
+
+/* title */
+
+.navbar-default .navbar-brand {
+    color: #eee;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #eee;
+}
+
+/* link */
+
+.navbar-default .navbar-nav > li > a {
+    color: #ccc;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #eee;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #eee;
+    background-color: #4f6068;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+
+/* caret */
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #ccc;
+    border-bottom-color: #ccc;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret, .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #eee;
+    border-bottom-color: #eee;
+}
+.navbar-default .navbar-nav > .open > a .caret, .navbar-default .navbar-nav > .open > a:hover .caret, .navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+
+/* mobile version */
+
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.spinner {
+    display: inline-block;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: opacity 0.25s, width 0.25s;
+    -moz-transition: opacity 0.25s, width 0.25s;
+    -o-transition: opacity 0.25s, width 0.25s;
+    transition: opacity 0.25s, width 0.25s;
+}
+
+/* ... */
+
+.has-spinner.active .spinner {
+    opacity: 1;
+    width: auto;
+    /* This doesn't work, just fix for unknown width elements */
+}
+
+/* ... */
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+.glyphicon-refresh-animate {
+    -webkit-animation-name: rotateThis;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes rotateThis {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+#export-filter-checkbox {
+    margin-left: 360px;
+}
+#export-file-checkbox {
+    margin-left: 300px;
+}
+
+/* Restore previously forced 300px width on bootstrap-select */
+.marketing .cgs-dropdown button.btn.dropdown-toggle, .marketing .cgs-dropdown .dropdown-menu.inner {
+    width: 100%;
+}

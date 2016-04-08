@@ -1,0 +1,25 @@
+<div class="row filter-row" ng-repeat="filter in filters track by $index" id="row-filter-{{ $index }}">
+    <!-- Label -->
+    <div class="col-xs-4 col-md-3 col-md-offset-2">
+        <h3>
+            <i class="glyphicon glyphicon-{{ filter.icon }}"></i>
+            <strong>{{ filter.name }}</strong>
+            <small ng-if="filter.subtext">{{ filter.subtext }}</small>
+        </h3>
+    </div>
+    <!-- Filter according to type -->
+    <div class="col-xs-5 {{ withIncludeSwitch ? 'col-md-3' : 'col-md-4' }}" ng-switch="filter.type">
+        <cgs-dropdown ng-switch-when="dropdown" ng-id="dropdown-{{ $index }}" ng-model="filter.value" datasource="datasource[filter.name]"></cgs-dropdown>
+        <cgs-select ng-switch-when="select" ng-id="dropdown-{{ $index }}" ng-model="filter.value" datasource="datasource[filter.name]"></cgs-select>
+        <cgs-datetimepicker ng-switch-when="date" datasource="filter.options" ng-id="datepicker-{{ $index }}" ng-model="filter.value"></cgs-datetimepicker>
+        <input ng-switch-default class="form-control" id="input-{{ $index }}" ng-model="filter.value" />
+    </div>
+    <!-- Incl. / Excl. to switch filter condition -->
+    <div class="col-xs-2 col-md-1" ng-if="withIncludeSwitch && filter.includeable">
+        <cgs-checkbox ng-id="checkbox-{{ $index }}" ng-model="filter.include" on-text="Incl." off-text="Excl."></cgs-checkbox>
+    </div>
+    <!-- Remove button -->
+    <div class="col-xs-1 text-right" ng-if="!filter.required">
+        <button class="btn btn-default" ng-click="removeFilter($index)"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+</div>
