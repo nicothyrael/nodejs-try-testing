@@ -1,5 +1,5 @@
 localization-quickfix-web
-======================
+========================
 
 Expressjs based Node web app sample
 
