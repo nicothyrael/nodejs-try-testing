@@ -127,8 +127,9 @@ Replace the existing DataStaging  export tool based on excel spreadsheet  by usi
     1-Insert new content (non-exported): 832=Mini|830=1|831=1036
     ```
 
+================================================================================================
 
-#### Pre-requisites
+#### App's pre-requisites
 
 Ensure you have `node` and `npm` installed.
 
