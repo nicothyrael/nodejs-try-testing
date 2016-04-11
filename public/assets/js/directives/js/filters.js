@@ -1,8 +1,4 @@
-/**
- * Directive used to include the filters inside a CGS-Report page.
- * <cgs-filters filters="activeFilters" datasource="filtersDatasource" with-include-switch></cgs-filters>
- * ** MUST ** be used inside a controller with a quickFixServicesFilters instance.
- */
+
 angular.module('quickFixModule.filters', [])
     .directive('cgsFilters', function($timeout) {
 
