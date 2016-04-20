@@ -6,7 +6,7 @@ module.exports = {
         user: 'DataStagingUser',
         password: 'travel',
         server: 'CHELLSSSQL34.karmalab.net',
-        database: 'DataStaging',
+        database: 'DataStaging_QuickFix',
         requestTimeout: 100000,
         options: {
             encrypt: false
