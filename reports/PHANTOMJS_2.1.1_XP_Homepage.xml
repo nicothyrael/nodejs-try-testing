@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="3">
+
+  <testsuite name="Homepage"
+    errors="0" failures="1" hostname="" id="" package="Homepage" skipped="2"
+    tests="3" time="5.988" timestamp="Mon, 02 May 2016 13:16:39 GMT">
+  
+    <testcase name="Homepage" time="5.988" assertions="2">
+
+      <failure message="Testing if the page title equals &quot;Localization Services&quot;.">    at Object.&lt;anonymous&gt; (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\features\step_definitions\steps.js:9:17)
+    at Object.run (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\cucumber\lib\cucumber\util\run.js:30:19)
+    at Object.invoke (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:90:21)
+    at Object.execute (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:230:29)
+    at C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:306:12
+    at Array.forEach (native)
+    at Object.feature.discovered.(anonymous function) [as Homepage] (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:303:11)
+    at Module.call (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch\lib\runner\module.js:63:34)
+    at C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch\lib\runner\testcase.js:97:29
+    at _fulfilled (C:\Users\nicolas.alonso\Documents\localization-quickfix-web\node_modules\nightwatch\node_modules\q\q.js:834:54)</failure>
+
+    
+    </testcase>
+  
+  
+    
+    <testcase
+      name="Open menu Tools">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Close menu Tools">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

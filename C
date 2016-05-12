@@ -1,0 +1,150 @@
+[
+  {
+    "id": "Homepage-and-menu",
+    "name": "Homepage and menu",
+    "description": "",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\Homepage.feature",
+    "elements": [
+      {
+        "name": "Homepage",
+        "id": "Homepage-and-menu;homepage",
+        "line": 3,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "I open 'http://localhost:8080' webpage",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 6160447798
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:2"
+            }
+          },
+          {
+            "name": "the title is 'Localization Services'",
+            "line": 6,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 9783678
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:8"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Open menu Tools",
+        "id": "Homepage-and-menu;open-menu-tools",
+        "line": 9,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "I open 'http://localhost:8080' webpage",
+            "line": 11,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 174328486
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:2"
+            }
+          },
+          {
+            "name": "I click in 'Tools' menu",
+            "line": 12,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 97011465
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:12"
+            }
+          },
+          {
+            "name": "the 'Tools' menu is 'open'",
+            "line": 13,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 64705100
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:19"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Close menu Tools",
+        "id": "Homepage-and-menu;close-menu-tools",
+        "line": 15,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "I open 'http://localhost:8080' webpage",
+            "line": 17,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 147652641
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:2"
+            }
+          },
+          {
+            "name": "I click in 'Tools' menu",
+            "line": 18,
+            "keyword": "And ",
+            "result": {
+              "status": "passed",
+              "duration": 76866023
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:12"
+            }
+          },
+          {
+            "name": "I click again in 'Tools' menu",
+            "line": 19,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 70856954
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:27"
+            }
+          },
+          {
+            "name": "the 'Tools' menu is not 'open'",
+            "line": 20,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 49859026
+            },
+            "match": {
+              "location": "C:\\Users\\nicolas.alonso\\Documents\\localization-quickfix-web\\features\\step_definitions\\steps.js:34"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

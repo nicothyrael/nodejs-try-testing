@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="Homepage"
+    errors="0" failures="0" hostname="" id="" package="Homepage" skipped="0"
+    tests="3" time="4.701" timestamp="Mon, 02 May 2016 13:20:02 GMT">
+  
+    <testcase name="Homepage" time="3.011" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Open menu Tools" time="1.340" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Close menu Tools" time="0.3500" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

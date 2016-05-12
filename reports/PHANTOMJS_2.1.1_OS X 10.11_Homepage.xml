@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Homepage"
+    errors="0" failures="1" hostname="" id="" package="Homepage" skipped="0"
+    tests="1" time="2.910" timestamp="Sat, 30 Apr 2016 03:45:04 GMT">
+  
+    <testcase name="Homepage" time="2.910" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;ul.dropdown-menu li a&gt; is visible.">    at Object.&lt;anonymous&gt; (/Users/nico/Documents/localization-quickfix-web/features/step_definitions/steps.js:14:17)
+    at Object.run (/Users/nico/node_modules/cucumber/lib/cucumber/util/run.js:30:19)
+    at Object.invoke (/Users/nico/node_modules/cucumber/lib/cucumber/support_code/step_definition.js:90:21)
+    at Object.execute (/Users/nico/Documents/localization-quickfix-web/node_modules/nightwatch-cucumber/lib/nightwatch-runner.js:292:29)
+    at /Users/nico/Documents/localization-quickfix-web/node_modules/nightwatch-cucumber/lib/nightwatch-runner.js:368:12
+    at Array.forEach (native)
+    at Object.feature.discovered.(anonymous function) [as Homepage] (/Users/nico/Documents/localization-quickfix-web/node_modules/nightwatch-cucumber/lib/nightwatch-runner.js:365:11)
+    at Module.call (/Users/nico/Documents/localization-quickfix-web/node_modules/nightwatch/lib/runner/module.js:63:34)
+    at /Users/nico/Documents/localization-quickfix-web/node_modules/nightwatch/lib/runner/testcase.js:97:29
+    at _fulfilled (/Users/nico/Documents/localization-quickfix-web/node_modules/q/q.js:834:54)</failure>
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
